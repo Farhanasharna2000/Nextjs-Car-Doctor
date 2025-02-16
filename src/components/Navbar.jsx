@@ -56,12 +56,13 @@ const Navbar = () => {
                 {
                     status=='authenticated'?(
                     <>
-                    <button onClick={()=>signOut()}>LogOut</button>
+                    <Image className='rounded-full' src={session?.user?.image} width={50} height={50} alt='user'/>
+                    <button className='btn' onClick={()=>signOut()}>LogOut</button>
                     </>
                     ):(
                     <>
-                      <Link href={'/login'}>Login</Link>
-                      <Link href={'/register'}>Register</Link>
+                      <Link className='btn' href={'/login'}>Login</Link>
+                      <Link className='btn' href={'/register'}>Register</Link>
                     </>)
                 }
               
