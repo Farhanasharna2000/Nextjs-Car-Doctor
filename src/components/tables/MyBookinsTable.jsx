@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaRegEdit } from "react-icons/fa";
 
-const MyAllBookings = ({ data }) => {
+const MyAllBookingsTable = ({ data }) => {
   return (
     <div className="my-8">
       <h1 className="text-center font-bold text-3xl my-4">My All Bookings</h1>
@@ -57,4 +57,4 @@ const MyAllBookings = ({ data }) => {
   );
 };
 
-export default MyAllBookings;
+export default MyAllBookingsTable;
