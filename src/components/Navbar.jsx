@@ -6,7 +6,7 @@ import React from 'react';
 
 const Navbar = () => {
     const { data: session, status } = useSession()
-    console.log(session)
+    // console.log(session)
     const navMenu = () => {
         return (
             <>
@@ -14,13 +14,13 @@ const Navbar = () => {
                 <li><Link href={'/about'}>About</Link></li>
                 <li><Link href={'/services'}>Services</Link></li>
                 <li><Link href={'/blog'}>Blog</Link></li>
-                <li><Link href={'/contact'}>Contact</Link></li>
+                <li><Link href={'/my-bookings'}>My Bookings</Link></li>
 
             </>
         )
     }
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 container mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
