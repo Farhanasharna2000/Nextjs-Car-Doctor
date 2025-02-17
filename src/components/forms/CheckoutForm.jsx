@@ -1,10 +1,12 @@
 "use client";
 
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import toast from "react-hot-toast";
 
 const CheckoutForm = ({ data }) => {
+  const router=useRouter()
   const { data: session } = useSession();
 //   console.log(data);
 
@@ -36,11 +38,12 @@ const CheckoutForm = ({ data }) => {
     };
 
     // console.log(bookingPayload);
-    const res=await fetch('http://localhost:3000/api/service',{
+    const res=await fetch('https://nextjs-car-doctor-zeta.vercel.app/api/service',{
         method:'POST',
         body:JSON.stringify(bookingPayload),
     })
     const postedResponse=await res.json()
+    router.push('/my-bookings')
     // console.log('posted data',postedResponse);
     
 }

@@ -39,7 +39,7 @@ export const PATCH =async(req,{params})=>{
             upsert:true
         }
         const updateResponse = await bookingsCollection.updateOne(query,filter,option)
-        revalidatePath('my-bookings')
+        revalidatePath('/my-bookings')
         return NextResponse.json(updateResponse)   
     }
     else{
