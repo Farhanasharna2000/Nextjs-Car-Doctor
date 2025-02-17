@@ -122,7 +122,7 @@ const BookingUpdateForm = ({ data }) => {
             <input
               className="btn btn-primary btn-block"
               type="submit"
-              value="Order Confirm"
+              value="Update"
             />
           </div>
         </form>
