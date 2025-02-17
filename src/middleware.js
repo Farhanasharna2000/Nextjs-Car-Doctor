@@ -3,7 +3,9 @@ import { NextResponse } from "next/server";
 
 export const middleware =async (req) => {
     // console.log('from middleware',req.nextUrl.pathname);
-    const token=await getToken({req}) //from nextauth doc
+    const token=await getToken({req,
+        secureCookie:process.env.NODE_ENV==='production'?true:false,
+    }) //from nextauth doc
     if (token) {
         
         return NextResponse.next()

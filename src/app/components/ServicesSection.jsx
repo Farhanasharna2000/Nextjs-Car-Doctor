@@ -7,7 +7,7 @@ const ServicesSection =async () => {
 const servicesCollection=dbConnect(collectionNamesObj.servicesCollection)
 const data = await servicesCollection.find({}).toArray();
     return (
-        <div className="grid grid-cols-12 gap-4 container mx-auto">
+        <div className="grid grid-cols-12 gap-4 mb-10 mt-5 container mx-auto">
         {data.map((item) => {
           return (
             <div

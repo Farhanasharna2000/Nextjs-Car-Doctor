@@ -11,9 +11,7 @@ const Navbar = () => {
         return (
             <>
                 <li><Link href={'/'}>Home</Link></li>
-                <li><Link href={'/about'}>About</Link></li>
-                <li><Link href={'/services'}>Services</Link></li>
-                <li><Link href={'/blog'}>Blog</Link></li>
+            
                 <li><Link href={'/my-bookings'}>My Bookings</Link></li>
 
             </>
@@ -67,7 +65,6 @@ const Navbar = () => {
                 }
               
 
-                <a className="btn btn-outline">Appointment</a>
             </div>
         </div>
     );

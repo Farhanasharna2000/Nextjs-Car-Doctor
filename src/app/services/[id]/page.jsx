@@ -4,10 +4,10 @@ import React from 'react';
 
 const ServiceDetailsPage = async ({ params }) => {
   const p = await params;
-  const res= await fetch(`http://localhost:3000/api/service/${p.id}`)
+  const res= await fetch(`https://nextjs-car-doctor-zeta.vercel.app/api/service/${p.id}`)
   const data=await res.json()
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-10 mt-5">
         <section className="flex justify-center ">
           <figure className="relative">
             <Image

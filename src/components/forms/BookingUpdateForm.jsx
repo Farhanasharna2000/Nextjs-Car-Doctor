@@ -29,12 +29,12 @@ const BookingUpdateForm = ({ data }) => {
     };
 
     // console.log(bookingPayload);
-    const res=await fetch(`http://localhost:3000/api/my-bookings/${data._id}`,{
+    const res=await fetch(`https://nextjs-car-doctor-zeta.vercel.app/api/my-bookings/${data._id}`,{
         method:'PATCH',
         body:JSON.stringify(bookingPayload),
     })
     const updatedDataResponse=await res.json()
-    router.push('my-bookings')
+    router.push('/my-bookings')
     console.log('updated data',updatedDataResponse);
     
 }
